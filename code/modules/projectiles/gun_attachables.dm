@@ -518,10 +518,22 @@ Defined in conflicts.dm of the #defines folder.
 	melee_mod = 0
 	size_mod = 0
 
+/obj/item/attachable/shotgun_barrel
+	name = "Ithaca barrel"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
+	icon = 'icons/obj/items/weapons/guns/attachments/1218_attachies.dmi'
+	icon_state = "m37_barrel_a"
+	attach_icon = "m37_barrel_a"
+	slot = "muzzle"
+	wield_delay_mod = WIELD_DELAY_NONE
+	flags_attach_features = NO_FLAGS
+	melee_mod = 0 //Integrated attachment for visuals, stats handled on main gun.
+	size_mod = 0
+
 /obj/item/attachable/rpg_baffle
 	name = "M5 exhaust baffle"
 	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
-	icon = 'icons/obj/items/weapons/guns/attachments/stock.dmi'
+	icon = 'icons/obj/items/weapons/guns/attachments/1218_attachies.dmi'
 	icon_state = "m5_stock"
 	attach_icon = "m5_stock"
 	slot = "stock"
@@ -529,6 +541,7 @@ Defined in conflicts.dm of the #defines folder.
 	flags_attach_features = NO_FLAGS
 	melee_mod = 0 //Integrated attachment for visuals, stats handled on main gun.
 	size_mod = 0
+	hud_offset_mod = 6
 
 /obj/item/attachable/sniperbarrel
 	name = "sniper barrel"
@@ -2056,8 +2069,6 @@ Defined in conflicts.dm of the #defines folder.
 	//but at the same time you are slow when 2 handed
 	aim_speed_mod = CONFIG_GET(number/slowdown_med)
 
-	select_gamemode_skin(type)
-
 /obj/item/attachable/stock/double
 	name = "\improper double barrel shotgun stock"
 	desc = "A chunky piece of wood coated in varnish and age."
@@ -3174,6 +3185,7 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "If you can read this, someone screwed up. Go Github this and bug a coder."
 	icon_state = "nsg23_stock"
 	slot = "stock"
+	flags_attach_features = NO_FLAGS
 	wield_delay_mod = WIELD_DELAY_NONE
 	melee_mod = 5
 	size_mod = 2
@@ -3185,6 +3197,10 @@ Defined in conflicts.dm of the #defines folder.
 	name = "NSG L23A1 stock"
 	desc = "If you can read this, someone screwed up. Go Github this and bug a coder."
 	icon_state = "rmc_nsg23_stock"
+
+/obj/item/attachable/stock/nsg23/l23
+	name = "NSG L23 stock"
+	icon_state = "l23_stock"
 
 /obj/item/attachable/stock/isr
 	name = "ISR stock"

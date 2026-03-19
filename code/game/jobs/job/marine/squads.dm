@@ -408,6 +408,7 @@
 
 /datum/squad/marine/pmc/secondary
 	name = SQUAD_PMCPLT_2
+	equipment_color = "#67d692"
 	chat_color = "#0fc777"
 	minimap_color = MINIMAP_SQUAD_ECHO
 	usable = FALSE
@@ -438,6 +439,21 @@
 	. = ..()
 
 	UnregisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
+
+//###############################
+
+/datum/squad/iasf
+	name = SQUAD_IASF
+	equipment_color = "#9a1228"
+	chat_color = "#9a1228"
+	radio_freq = IASF_FREQ
+	minimap_color = "##9a1228"
+	use_stripe_overlay = FALSE
+	faction = FACTION_IASF
+	active = TRUE
+	roundstart = FALSE
+	usable = TRUE
+	locked = TRUE
 
 //###############################
 /datum/squad/clf

@@ -874,8 +874,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 /obj/item/clothing/head/helmet/marine/specialist
 	name = "\improper B18 helmet"
 	desc = "Helmet and faceplate component of the B18 armor system. Nanobonded carbonfiber laminated with ultrahigh molecular density polymer, with an integral rebreather and heads up display."
-	icon_state = "grenadier_helmet"
-	item_state = "grenadier_helmet"
+	icon_state = "pyro_helmet"
+	item_state = "pyro_helmet"
 	armor_melee = CLOTHING_ARMOR_VERYHIGH
 	armor_bullet = CLOTHING_ARMOR_GIGAHIGH
 	armor_bomb = CLOTHING_ARMOR_ULTRAHIGH
@@ -885,7 +885,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	unacidable = TRUE
 	anti_hug = 6
 	force = 20
-	flags_atom = NO_NAME_OVERRIDE
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|BLOCKGASEFFECT|ALLOWCPR
 
 /obj/item/clothing/head/helmet/marine/grenadier
 	name = "\improper M12 grenadier helmet"
@@ -1063,6 +1064,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
 	flags_marine_helmet = HELMET_DAMAGE_OVERLAY|HELMET_GARB_OVERLAY
 	built_in_visors = list(new /obj/item/device/helmet_visor/pmc)
+	start_down_visor_type = /obj/item/device/helmet_visor/pmc
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/rmc
 	desc = "Standard issue high molecular density polymer combat helmet used by RMC. Designed by Weyland-Yutani, initially as a hard hat, the project was eventually retrofitted into a cheap, reliable combat helmet system that incorporates a tactical camera, IFF signal transponder, and heads up display lens. Also features white/black hot IR viewing modes from the camera system."
@@ -1096,6 +1098,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR
 	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
 	built_in_visors = list(new /obj/item/device/helmet_visor/pmc/alt)
+	start_down_visor_type = /obj/item/device/helmet_visor/pmc/alt
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc
 	name = "\improper Mk16 tactical helmet"
@@ -2140,6 +2143,10 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 /obj/item/clothing/head/helmet/marine/veteran/royal_marine
 	name = "\improper L5A2 ballistic helmet"
 	desc = "A High-cut ballistic helmet. Designed by Lindenthal-Ehrenfeld Militärindustrie it is intended to be used by Royal Marines Commando as part of the kestrel armour system."
+	icon = 'icons/obj/items/clothing/hats/hats_by_faction/TWE.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/TWE.dmi'
+	)
 	icon_state = "rmc_helm1"
 	item_state = "rmc_helm1"
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
@@ -2154,31 +2161,10 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_marine_helmet = NO_FLAGS
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	clothing_traits = list(TRAIT_EAR_PROTECTION)
-
-/obj/item/clothing/head/helmet/marine/veteran/royal_marine_pvp
-	name = "\improper L5A2 ballistic helmet"
-	desc = "A High-cut ballistic helmet. Designed by Lindenthal-Ehrenfeld Militärindustrie it is intended to be used by Royal Marines Commando as part of the kestrel armour system."
-	icon_state = "rmc_helm1"
-	item_state = "rmc_helm1"
-	icon = 'icons/obj/items/clothing/hats/hats_by_faction/TWE.dmi'
-	item_icons = list(
-		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/TWE.dmi'
-	)
-	armor_melee = CLOTHING_ARMOR_MEDIUM
-	armor_bullet = CLOTHING_ARMOR_MEDIUM
-	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bomb = CLOTHING_ARMOR_MEDIUM
-	armor_bio = CLOTHING_ARMOR_LOW
-	armor_internaldamage = CLOTHING_ARMOR_LOW
-	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
-	flags_inventory = BLOCKSHARPOBJ
-	flags_inv_hide = NO_FLAGS
-	flags_marine_helmet = NO_FLAGS
-	flags_atom = NO_NAME_OVERRIDE
 	built_in_visors = list(new /obj/item/device/helmet_visor/medical)
 	start_down_visor_type = /obj/item/device/helmet_visor/medical
 
-/obj/item/clothing/head/helmet/marine/veteran/royal_marine_pvp/medic
+/obj/item/clothing/head/helmet/marine/veteran/royal_marine/medic
 	name = "\improper L5A2 ballistic medic helmet"
 	desc = "A High-cut ballistic helmet. Designed by Lindenthal-Ehrenfeld Militärindustrie it is intended to be used by Royal Marines Commando as part of the kestrel armour system. This one comes with an advanced medical HUD and a dark-green patch on the back, denoting that the wearer is a corpsman."
 	icon_state = "rmc_helm_medic"
@@ -2186,7 +2172,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	built_in_visors = list(new /obj/item/device/helmet_visor/medical/advanced)
 	start_down_visor_type = /obj/item/device/helmet_visor/medical/advanced
 
-/obj/item/clothing/head/helmet/marine/veteran/royal_marine_pvp/pilot
+/obj/item/clothing/head/helmet/marine/veteran/royal_marine/pilot
 	name = "\improper PH-4 'Spitfire' flight helmet"
 	desc = "Standard flight helmet used across the Three World Empire’s aerospace forces, from fighter pilots to atmospheric crews. This PH-4 variant is tailored for dropship operations in space, featuring reinforced plating, HUD optics, and encrypted comms. Essential for high-risk insertions, landings, and exfil missions. Nicknamed “Spitfire” for its reliability under fire."
 	icon_state = "pilot_helm"
@@ -2197,7 +2183,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = HIDEALLHAIR
 
-/obj/item/clothing/head/helmet/marine/veteran/royal_marine_pvp/pilot/alt
+/obj/item/clothing/head/helmet/marine/veteran/royal_marine/pilot/alt
 	icon_state = "pilot_helm_alt"
 
 /obj/item/clothing/head/helmet/marine/veteran/royal_marine/breacher
@@ -2212,6 +2198,22 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_bio = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	clothing_traits = list(TRAIT_EAR_PROTECTION)
+
+/obj/item/clothing/head/helmet/space/pressure/rmc
+	name = "\improper Ross-Smith Mk4 pressure helmet"
+	desc = "A heavy space helmet, designed to be worm alongside the Ross-Smith Mk4 pressure suit utilized by the Three World Empires Royal Marine Commando forces. Makes usage of camera systems and an internal display screen, rather than a toughened glass visor for visibility."
+	helmet_color = "helmet_rmc"
+	contained_sprite = TRUE
+	item_state = "pressure_helmet_rmc"
+	icon_state = "pressure_helmet_rmc"
+	icon = 'icons/mob/humans/onmob/contained/royal_marines_commando.dmi'
+
+/obj/item/clothing/head/helmet/marine/veteran/royal_marine/generic
+	name = "\improper L1 ballistic helmet"
+	desc = "A versatile ballistic helmet designed by Alphatech for general use across various branches of the TWE military and affiliated organizations. Drawing some design inspiration from the USCM’s M10 Pattern Helmet, the L1 offers reliable protection against shrapnel and ballistic threats."
+	icon_state = "generic_helm"
+	item_state = "generic_helm"
+	flags_marine_helmet = HELMET_GARB_OVERLAY
 
 //=USASF & ARMY=\\
 
@@ -2248,36 +2250,3 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	item_state = "rmc_helm2"
 	desc = "A common helmet used by various blue-collar professions in the TWE."
 
-	//=IASF=\\
-
-/obj/item/clothing/head/helmet/marine/veteran/iasf_beret
-	name = "\improper IASF beret"
-	desc = "A distinctive crimson beret worn by the Imperial Armed Space Force. Reinforced with flexible Kevlar, it offers minimal protection while maintaining a traditional and respected appearance."
-	icon_state = "beret_iasf"
-	item_state = "beret_iasf"
-	icon = 'icons/obj/items/clothing/hats/hats_by_faction/TWE.dmi'
-	item_icons = list(
-		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/TWE.dmi',
-	)
-	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bomb = CLOTHING_ARMOR_MEDIUM
-	armor_bio = CLOTHING_ARMOR_LOW
-	armor_internaldamage = CLOTHING_ARMOR_LOW
-	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
-	flags_inventory = BLOCKSHARPOBJ
-	flags_inv_hide = NO_FLAGS
-	flags_marine_helmet = NO_FLAGS
-
-/obj/item/clothing/head/helmet/marine/veteran/iasf_beret/tl
-	icon_state = "beret_iasf_tl"
-	item_state = "beret_iasf_tl"
-
-/obj/item/clothing/head/beret/iasf_commander_cap
-	name = "IASF officer's service cap"
-	desc = "A distinguished service cap worn by officers of the Imperial Armed Space Force. Featuring a crimson band, gold IASF emblem, and a black patent peak, it reflects the discipline and authority of the Empire’s airborne command."
-	icon = 'icons/obj/items/clothing/hats/hats_by_faction/TWE.dmi'
-	item_icons = list(
-		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/TWE.dmi'
-	)
-	icon_state = "iasf_co_cap"
-	item_state = "iasf_co_cap"

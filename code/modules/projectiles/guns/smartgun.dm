@@ -505,8 +505,11 @@
 /obj/item/weapon/gun/smartgun/dirty
 	name = "\improper M56A3 'Dirty' smartgun"
 	desc = "The actual firearm in the 4-piece M56A3 Smartgun System. Ruggedized electronics and a slightly lighter frame are the only differences between this and the standard UA-issue A2 model.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
+	flags_equip_slot = SLOT_BACK|SLOT_BLOCK_SUIT_STORE
 	flags_gun_features = GUN_WY_RESTRICTED|GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY
+	flags_item = TWOHANDED|SMARTGUNNER_BACKPACK_OVERRIDE
 	drain = 30	//Slightly more power effictient than the basic model
+	aim_slowdown = SLOWDOWN_AMT_GREENFIRE //Jank, but it saves making a new define for a marginal decrease in slowdown
 
 /obj/item/weapon/gun/smartgun/dirty/Initialize(mapload, ...)
 	. = ..()
@@ -538,7 +541,7 @@
 	fa_scatter_peak = FULL_AUTO_SCATTER_PEAK_TIER_10
 	fa_max_scatter = SCATTER_AMOUNT_NONE
 
-/obj/item/weapon/gun/smartgun/l56a2
+/obj/item/weapon/gun/smartgun/l56a2 // Frozen till modularization, don't know what to do with PVP smartguns honestly, since they don't have feed-cover, they just put new bins in and cock it
 	name = "\improper L56A2 smartgun"
 	desc = "The actual firearm in the 4-piece L56A2 Smartgun System. If you have this, you're about to bring some serious pain to anyone in your way."
 	desc_lore = "Originally produced for the Three World Empires Royal Marines forces, it mostly ended up in hands of W-Y PMCs and other affiliated forces, with Three World Empire giving preference for other design, that is still produced by W-Y regardless. Compared to more commonly used M56A2, it has improved recoil control, better electronics and advanced tracking software."
@@ -685,6 +688,13 @@
 //For the RMC ship, giving them access to weapons early but no ammo
 /obj/item/weapon/gun/smartgun/rmc/unloaded
 	current_mag = null
+
+/obj/item/weapon/gun/smartgun/rmc/iasf
+	current_mag = /obj/item/ammo_magazine/smartgun
+	ammo = /obj/item/ammo_magazine/smartgun
+	ammo_primary = /datum/ammo/bullet/rifle/heavy/tracer //Toggled ammo type
+	ammo_secondary = /datum/ammo/bullet/rifle/heavy/ap/tracer ///Toggled ammo type
+	ammo_tertiary = /datum/ammo/bullet/rifle/heavy/impdet
 
 /obj/item/weapon/gun/smartgun/silenced
 	name = "XM56A4 smartgun"

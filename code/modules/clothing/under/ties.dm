@@ -1128,6 +1128,7 @@
 	var/obj/item/weapon/gun/current_gun
 	var/sheatheSound = 'sound/weapons/gun_pistol_sheathe.ogg'
 	var/drawSound = 'sound/weapons/gun_pistol_draw.ogg'
+	storage_slots = 4
 	storage_flags = STORAGE_ALLOW_QUICKDRAW|STORAGE_FLAGS_POUCH
 	can_hold = list(
 
@@ -1913,9 +1914,22 @@
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon/medic
 	name = "\improper M3-R Pattern Corpsman Webbing"
-	desc = "A large pouch with M3-R Pattern webbing clips designed to house surgical tools for Corpsmen attached to FORECON units, where field hospitals are not readily available."
+	desc = "A large pouch with M3-R Pattern webbing clips designed to house medical equipment for Corpsmen attached to FORECON units, where resupply isn't readily available."
 	icon_state = "m3rwebbingmedic"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/recon
+
+//Pre-load for MARSOC props
+/obj/item/clothing/accessory/storage/webbing/m3/recon/medic/marsoc
+	icon_state = "armywebbing"
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/recon/marsoc
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/recon/marsoc/fill_preset_inventory()
+	new /obj/item/storage/surgical_case/regular(src)
+	new /obj/item/tool/surgery/surgical_line(src)
+	new /obj/item/tool/surgery/synthgraft(src)
+	new /obj/item/storage/syringe_case/regular(src)
+	new /obj/item/reagent_container/blood/OMinus(src)
+	new /obj/item/reagent_container/blood/OMinus(src)
 
 /obj/item/storage/internal/accessory/black_vest/m3generic
 	cant_hold = list(
@@ -1936,19 +1950,6 @@
 		/obj/item/reagent_container/blood,
 		/obj/item/bodybag,
 	)
-
-//Pre-load for MARSOC props
-/obj/item/clothing/accessory/storage/webbing/m3/recon/medic/marsoc
-	icon_state = "armywebbing"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/recon/marsoc
-
-/obj/item/storage/internal/accessory/black_vest/m3generic/recon/marsoc/fill_preset_inventory()
-	new /obj/item/storage/surgical_case/regular(src)
-	new /obj/item/tool/surgery/surgical_line(src)
-	new /obj/item/tool/surgery/synthgraft(src)
-	new /obj/item/storage/syringe_case/regular(src)
-	new /obj/item/reagent_container/blood/OMinus(src)
-	new /obj/item/reagent_container/blood/OMinus(src)
 
 /obj/item/clothing/accessory/storage/webbing/m56
 	name = "\improper Clip-on Pouch"
@@ -2070,6 +2071,7 @@
 	storage_slots = 5
 	can_hold = list(
 		/obj/item/ammo_magazine/rifle/nsg23,
+		/obj/item/ammo_magazine/rifle/rmc_f90,
 		/obj/item/ammo_magazine/sniper,
 		/obj/item/ammo_magazine/pistol/vp78,
 		/obj/item/ammo_magazine/pistol/vp70,
@@ -2247,6 +2249,16 @@
 	new /obj/item/ammo_magazine/rifle/heap(src)
 	new /obj/item/ammo_magazine/rifle/heap(src)
 	new /obj/item/ammo_magazine/rifle/heap(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/mag/pmc/preseteight
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/pmc/eight
+
+/obj/item/storage/internal/accessory/webbing/m3mag/pmc/eight/fill_preset_inventory()
+	new /obj/item/ammo_magazine/smg/m39(src)
+	new /obj/item/ammo_magazine/smg/m39(src)
+	new /obj/item/ammo_magazine/smg/m39(src)
+	new /obj/item/ammo_magazine/smg/m39(src)
+	new /obj/item/ammo_magazine/smg/m39(src)
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon/shotgun/pmc
 	name = "\improper 41 Pattern Shell Webbing"
