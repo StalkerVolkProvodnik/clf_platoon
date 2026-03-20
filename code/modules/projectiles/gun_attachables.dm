@@ -34,7 +34,7 @@ Defined in conflicts.dm of the #defines folder.
 	matter = list("metal" = 100)
 	w_class = SIZE_SMALL
 	force = 1
-	var/slot = null //"muzzle", "rail", "side_rail", "under", "stock", "special"
+	var/slot = null //"muzzle", "rail", "side_rail", "under", "sling", "stock", "special"
 
 	/*
 	Anything that isn't used as the gun fires should be a flat number, never a percentange. It screws with the calculations,
@@ -235,6 +235,8 @@ Defined in conflicts.dm of the #defines folder.
 			base_attachment_desc = "It has a [icon2html(src)] [name] mounted on the side."
 		if("muzzle")
 			base_attachment_desc = "It has a [icon2html(src)] [name] mounted on the front."
+		if("sling")
+			base_attachment_desc = "It has a [icon2html(src)] [name] mounted to the weapon."
 		if("stock")
 			base_attachment_desc = "It has a [icon2html(src)] [name] for a stock."
 		if("under")
@@ -1058,7 +1060,7 @@ Defined in conflicts.dm of the #defines folder.
 	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi'
 	icon_state = "pve-sling"
 	attach_icon = "pve-sling_a"
-	slot = "rail"
+	slot = "sling"
 	var/retrieval_slot = WEAR_J_STORE
 
 /obj/item/attachable/sling/New()
@@ -3481,6 +3483,8 @@ Defined in conflicts.dm of the #defines folder.
 			base_attachment_desc = "It has a [icon2html(src)] [name] mounted on the side."
 		if("muzzle")
 			base_attachment_desc = "It has a [icon2html(src)] [name] mounted on the front."
+		if("sling")
+			base_attachment_desc = "It has a [icon2html(src)] [name] mounted to the weapon."
 		if("stock")
 			base_attachment_desc = "It has a [icon2html(src)] [name] for a stock."
 		if("under")
