@@ -146,9 +146,6 @@
 	desc = "Produced only by artisans overseen directly by the Council of Ancients, the Nracha-Dte-Type is a powered suit of armor built for war rather than hunting. It is heavy, and absurdly protective."
 	icon = 'icons/obj/items/hunter/mcaste_gear.dmi'
 	icon_state = "fullarmor_soldier"
-	item_icons = list(
-		WEAR_JACKET = 'icons/mob/humans/onmob/hunter/mcaste_gear.dmi'
-	)
 
 /obj/item/clothing/suit/armor/yautja/hunter/full/soldierB
 	name = "\improper Nracha-Dte command power armor"
@@ -282,10 +279,6 @@
 	icon = 'icons/obj/items/hunter/mcaste_gear.dmi'
 	icon_state = "y-boots_powered"
 	item_state = "y-boots_powered"
-	item_icons = list(
-		WEAR_FEET = 'icons/mob/humans/onmob/hunter/mcaste_gear.dmi'
-	)
-
 
 /obj/item/clothing/under/chainshirt
 	name = "ancient alien mesh suit"

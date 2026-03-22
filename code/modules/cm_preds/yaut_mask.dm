@@ -228,9 +228,6 @@
 	icon_state = "helmet_powered"
 	item_state = "helmet_powered"
 	icon = 'icons/obj/items/hunter/mcaste_gear.dmi'
-	item_icons = list(
-		WEAR_FACE = 'icons/mob/humans/onmob/hunter/mcaste_gear.dmi'
-	)
 
 /obj/item/clothing/mask/gas/yautja/thrall
 	name = "alien mask"
