@@ -416,6 +416,7 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/extended_barrel/New()
 	..()
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_4
+	damage_mod = BULLET_DAMAGE_MULT_TIER_2
 	velocity_mod = AMMO_SPEED_TIER_1
 
 /obj/item/attachable/heavy_barrel
@@ -454,7 +455,6 @@ Defined in conflicts.dm of the #defines folder.
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_4
 	recoil_mod = -RECOIL_AMOUNT_TIER_3
 
-	damage_falloff_mod = 0.1
 	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_4
 	recoil_unwielded_mod = -RECOIL_AMOUNT_TIER_4
 
@@ -691,6 +691,7 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/mateba/long/New()
 	..()
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_4
+	damage_mod = BULLET_DAMAGE_MULT_TIER_2
 	scatter_mod = -SCATTER_AMOUNT_TIER_6
 	delay_mod = FIRE_DELAY_TIER_7
 
@@ -710,6 +711,7 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/mateba/short/New()
 	..()
 	accuracy_mod = -HIT_ACCURACY_MULT_TIER_4
+	damage_mod = -BULLET_DAMAGE_MULT_TIER_2
 	scatter_mod = SCATTER_AMOUNT_TIER_6
 	delay_mod = -FIRE_DELAY_TIER_7
 
@@ -745,7 +747,6 @@ Defined in conflicts.dm of the #defines folder.
 	..()
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_4
 	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_1
-	movement_onehanded_acc_penalty_mod = MOVEMENT_ACCURACY_PENALTY_MULT_TIER_2
 
 /obj/item/attachable/reddot/upp
 	name = "EKP-9-M Red Dot Sight"
@@ -762,10 +763,9 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/reflex/New()
 	..()
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_4
-	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_1
+	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_2
 	scatter_mod = -SCATTER_AMOUNT_TIER_10
 	burst_scatter_mod = -1
-	movement_onehanded_acc_penalty_mod = MOVEMENT_ACCURACY_PENALTY_MULT_TIER_2
 
 /obj/item/attachable/reflex/upp
 	name = "PK-12 Reflex Sight"
@@ -936,10 +936,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/quickfire/New()
 	..()
-	scatter_mod = SCATTER_AMOUNT_TIER_8
 	delay_mod = -0.30
-	accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_4
-	scatter_unwielded_mod = SCATTER_AMOUNT_TIER_6
 
 /obj/item/attachable/flashlight/grip //Grip Light is here because it is a child object. Having it further down might cause a future coder a headache.
 	name = "underbarrel flashlight grip"
@@ -979,7 +976,6 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/flashlight/laser_light_combo/New()
 	..()
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_1
-	movement_onehanded_acc_penalty_mod = -MOVEMENT_ACCURACY_PENALTY_MULT_TIER_5
 	scatter_mod = -SCATTER_AMOUNT_TIER_10
 	scatter_unwielded_mod = -SCATTER_AMOUNT_TIER_9
 	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_1
@@ -1105,8 +1101,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/scope/New()
 	..()
-	accuracy_mod = -HIT_ACCURACY_MULT_TIER_1
-	movement_onehanded_acc_penalty_mod = MOVEMENT_ACCURACY_PENALTY_MULT_TIER_4
+	accuracy_mod = HIT_ACCURACY_MULT_TIER_2
 	accuracy_unwielded_mod = 0
 
 	accuracy_scoped_buff = HIT_ACCURACY_MULT_TIER_8 //to compensate initial debuff
@@ -1472,8 +1467,6 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/scope/mini_iff/New()
 	..()
-	damage_mod = -BULLET_DAMAGE_MULT_TIER_4
-	movement_onehanded_acc_penalty_mod = MOVEMENT_ACCURACY_PENALTY_MULT_TIER_6
 	accuracy_unwielded_mod = 0
 
 	accuracy_scoped_buff = HIT_ACCURACY_MULT_TIER_1
