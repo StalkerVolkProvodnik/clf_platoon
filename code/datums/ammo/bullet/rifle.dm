@@ -298,13 +298,13 @@
 
 /datum/ammo/bullet/rifle/heavy/upp_smartgun/ap
 	name = "12.7x40 armor-piercing bullet"
-	damage = 85
+	damage = 75
 	penetration = ARMOR_PENETRATION_TIER_10
 
 /datum/ammo/bullet/rifle/heavy/upp_smartgun/flak
 	name = "12.7x40 flak bullet" //the gun makes the round detonate really early or something
-	damage = 50
-	penetration = ARMOR_PENETRATION_TIER_4
+	damage = 40
+	penetration = ARMOR_PENETRATION_TIER_3
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_3
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
@@ -318,7 +318,7 @@
 /datum/ammo/bullet/rifle/heavy/upp/flak_spread
 	name = "12.7x40 flak"
 	damage = 25
-	penetration = ARMOR_PENETRATION_TIER_4
+	penetration = ARMOR_PENETRATION_TIER_3
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
 	damage_var_low = PROJECTILE_VARIANCE_TIER_8
