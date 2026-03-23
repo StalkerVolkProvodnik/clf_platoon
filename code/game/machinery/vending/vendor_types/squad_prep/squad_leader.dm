@@ -143,9 +143,6 @@ GLOBAL_LIST_INIT(cm_vending_clothing_leader, list(
 		list("M3-R Pattern Magazine Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/recon, MARINE_CAN_BUY_ACCESSORY),
 		list("M3-R Pattern Grenade Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/recon/m40, MARINE_CAN_BUY_ACCESSORY),
 		list("M3-R Pattern Shell Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/recon/shotgun, MARINE_CAN_BUY_ACCESSORY),
-
-		list("HELMET OPTICS (CHOOSE 1)", 0, null, null, null),
-		list("Night Vision Optic", 0, /obj/item/device/helmet_visor/night_vision, VENDOR_ITEM_RECOMMENDED),
 	))
 
 /obj/structure/machinery/cm_vending/clothing/leader
