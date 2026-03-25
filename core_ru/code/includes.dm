@@ -6,3 +6,5 @@
 #include "stuff\pixel_shifting.dm"
 #include "stuff\layer_shifting.dm"
 #include "stuff\dice.dm"
+#include "stuff\decorations.dm"
+#include "stuff\rasputin.dm"

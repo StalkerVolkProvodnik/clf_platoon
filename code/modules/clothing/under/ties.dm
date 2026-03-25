@@ -478,6 +478,12 @@
 	name = "Brazilian Colonial Military Police patch"
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the Brazilian Military Police."
 	icon_state = "brazilpolicepatch"
+
+/obj/item/clothing/accessory/patch/clf_patch
+	name = "CLF patch"
+	desc = "A circular, fire-resistant patch with a white border. The design features three white stars and a tricolor background: green, black, and red, symbolizing the Colonial Liberation Front's fight for independence and unity. This patch is worn by CLF fighters as a badge of defiance against corporate and governmental oppression, representing their struggle for a free and self-determined colonial future. Though feared and reviled by some, it remains a powerful symbol of resistance and revolution."
+	icon_state = "clfpatch"
+
 //W-Y patches
 /obj/item/clothing/accessory/patch/wy
 	name = "Weyland-Yutani patch"
@@ -593,6 +599,12 @@
 /obj/item/clothing/accessory/poncho/green/army
 	name = "Well-worn Poncho"
 	desc = "The standard poncho has variations for every climate. Custom fitted to be attached to M3 & M4 armor variants, it is comfortable and warms or cools as needed. A trooper couldn't ask for more. Affectionately referred to as a \"woobie\"."
+
+/obj/item/clothing/accessory/poncho/clf_cape
+	name = "torn CLF flag"
+	desc = "A torn up CLF flag with a pin that allows it to be worn as a cape."
+	icon_state = "clf_cape"
+	has_variation = FALSE
 
 /obj/item/clothing/accessory/poncho/green/raicoat
 	name = "Rain Poncho"
