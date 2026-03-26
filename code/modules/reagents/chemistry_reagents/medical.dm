@@ -165,7 +165,7 @@
 /datum/reagent/medical/anti_toxin
 	name = "Dylovene"
 	id = "anti_toxin"
-	description = "General use anti-toxin, that neutralizes most toxins in the bloodstream. Commonly used in many advanced chemicals. Can be used as a mild anti-hallucinogen and to reduce tiredness."
+	description = "General use anti-toxin, that neutralizes most toxins in the bloodstream, also fixing your liver and kidneys. Commonly used in many advanced chemicals. Can be used as a mild anti-hallucinogen and to reduce tiredness."
 	reagent_state = LIQUID
 	color = "#3EA72A" // rgb: 62, 167, 42 changed to be slightly darker to differentiate from oxycodone autoinjectors
 	overdose = REAGENTS_OVERDOSE
