@@ -91,8 +91,6 @@
 	uses_skin_color = TRUE
 	special_body_types = TRUE
 
-	death_sound = list(MALE = "male_preburst", FEMALE = "female_preburst")
-
 /datum/species/human/handle_on_fire(humanoidmob)
 	. = ..()
 	INVOKE_ASYNC(humanoidmob, TYPE_PROC_REF(/mob, emote), pick("pain", "scream"))
