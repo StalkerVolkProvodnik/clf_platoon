@@ -119,8 +119,6 @@
 
 	var/has_species_tab_items = FALSE
 
-	var/list/burstscreams = list()
-
 /datum/species/New()
 	if(unarmed_type)
 		unarmed = new unarmed_type()

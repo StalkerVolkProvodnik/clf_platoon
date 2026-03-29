@@ -91,7 +91,7 @@
 	uses_skin_color = TRUE
 	special_body_types = TRUE
 
-	burstscreams = list(MALE = "male_preburst", FEMALE = "female_preburst")
+	death_sound = list(MALE = "male_death", FEMALE = "female_death")
 
 /datum/species/human/handle_on_fire(humanoidmob)
 	. = ..()
