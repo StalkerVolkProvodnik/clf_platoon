@@ -216,7 +216,7 @@
 	var/mob/living/carbon/human/attached = null
 	var/reagent_removed_per_second = AMOUNT_PER_TIME(8, 2 SECONDS)
 	var/obj/item/cell/pdcell = null
-	var/filter_cost = AMOUNT_PER_TIME(20, 2 SECONDS)
+	var/filter_cost = AMOUNT_PER_TIME(10, 2 SECONDS)
 	var/blood_cost = AMOUNT_PER_TIME(4, 2 SECONDS)
 	var/attach_time = 1.2 SECONDS
 
