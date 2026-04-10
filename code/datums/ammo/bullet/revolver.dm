@@ -8,7 +8,7 @@
 	name = "revolver bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 
-	damage = 70
+	damage = 60
 	penetration = ARMOR_PENETRATION_TIER_2
 	accuracy = HIT_ACCURACY_TIER_2
 	effective_range_max = 5
@@ -22,7 +22,7 @@
 
 /datum/ammo/bullet/revolver/marksman
 	name = "marksman revolver bullet"
-	damage = 65
+	damage = 55
 	shrapnel_chance = 0
 	damage_falloff = 0
 	accurate_range = 12
@@ -31,7 +31,7 @@
 /datum/ammo/bullet/revolver/heavy
 	name = "heavy revolver bullet"
 
-	damage = 52
+	damage = 35
 	penetration = ARMOR_PENETRATION_TIER_4
 	accuracy = HIT_ACCURACY_TIER_3
 
@@ -41,7 +41,7 @@
 
 /datum/ammo/bullet/revolver/incendiary
 	name = "incendiary revolver bullet"
-	damage = 47
+	damage = 40
 
 /datum/ammo/bullet/revolver/incendiary/set_bullet_traits()
 	..()
@@ -84,7 +84,7 @@
 	name = "heavy revolver bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	penetration = ARMOR_PENETRATION_TIER_1
-	damage = 90
+	damage = 70
 
 
 /datum/ammo/bullet/revolver/upp/shrapnel
@@ -96,7 +96,7 @@
 	bonus_projectiles_type = /datum/ammo/bullet/revolver/upp/shrapnel_bits
 
 	max_range = 6
-	damage = 45 // + TIER_4 * 3
+	damage = 40 // + TIER_4 * 3
 	damage_falloff = DAMAGE_FALLOFF_TIER_7
 	penetration = -ARMOR_PENETRATION_TIER_1
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_3

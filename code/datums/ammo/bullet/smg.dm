@@ -28,7 +28,7 @@
 
 /datum/ammo/bullet/smg/squash
 	name = "squash-head submachinegun bullet"
-	damage = 50
+	damage = 30
 	penetration = ARMOR_PENETRATION_TIER_3
 	effective_range_max = 7
 	damage_falloff = DAMAGE_FALLOFF_TIER_3
@@ -52,7 +52,7 @@
 
 /datum/ammo/bullet/smg/ap
 	name = "armor-piercing submachinegun bullet"
-	damage = 30
+	damage = 25
 	penetration = ARMOR_PENETRATION_TIER_4
 	shell_speed = AMMO_SPEED_TIER_4
 
@@ -113,7 +113,7 @@
 	name = "wall-penetrating submachinegun bullet"
 	shrapnel_chance = 0
 
-	damage = 35
+	damage = 30
 	penetration = ARMOR_PENETRATION_TIER_10
 
 /datum/ammo/bullet/smg/ap/penetrating/set_bullet_traits()
@@ -183,7 +183,7 @@
 /datum/ammo/bullet/smg/p90/twe_ap
 	name = "armor-piercing submachinegun bullet"
 
-	damage = 27
+	damage = 25
 	accurate_range = 6
 	effective_range_max = 9
 	penetration = ARMOR_PENETRATION_TIER_6

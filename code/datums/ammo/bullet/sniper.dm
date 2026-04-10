@@ -245,7 +245,7 @@
 	))
 
 /datum/ammo/bullet/sniper/anti_materiel/vulture
-	damage = 600 // Fully intended to vaporize anything smaller than a mini cooper
+	damage = 400 // Fully intended to vaporize anything smaller than a mini cooper
 	accurate_range_min = 0
 	handful_state = "vulture_bullet"
 	sound_hit = 'sound/bullets/bullet_vulture_impact.ogg'

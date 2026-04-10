@@ -14,8 +14,8 @@
 
 	accurate_range = 7
 	max_range = 14
-	damage = 100
-	penetration = ARMOR_PENETRATION_TIER_4
+	damage = 90
+	penetration = ARMOR_PENETRATION_TIER_6
 	damage_var_low = PROJECTILE_VARIANCE_TIER_10
 	damage_var_high = PROJECTILE_VARIANCE_TIER_1
 	damage_armor_punch = 2
@@ -45,9 +45,9 @@
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
 	accurate_range = 10
 	max_range = 18
-	damage = 125
+	damage = 110
 	damage_armor_punch = 5
-	penetration = ARMOR_PENETRATION_TIER_5
+	penetration = ARMOR_PENETRATION_TIER_8
 	firing_freq_offset = SOUND_FREQ_LOW
 
 /datum/ammo/bullet/shotgun/slug/special/on_hit_mob(mob/M,obj/projectile/P)
@@ -62,8 +62,8 @@
 	sound_bounce = "energy_bounce"
 	hit_effect_color = "#00aeff"
 	sound_override = 'sound/weapons/gun_es7lethal.ogg'
-	damage = 90
-	penetration = ARMOR_PENETRATION_TIER_6
+	damage = 75
+	penetration = ARMOR_PENETRATION_TIER_7
 	accuracy = HIT_ACCURACY_TIER_5
 
 /datum/ammo/bullet/shotgun/beanbag
@@ -213,7 +213,7 @@
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_5
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
 	max_range = 14
-	damage = 50
+	damage = 45
 	damage_var_low = PROJECTILE_VARIANCE_TIER_10
 	damage_var_high = PROJECTILE_VARIANCE_TIER_5
 	penetration = ARMOR_PENETRATION_TIER_9

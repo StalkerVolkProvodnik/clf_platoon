@@ -11,9 +11,8 @@
 	accuracy = HIT_ACCURACY_TIER_3
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	damage = 40
-	penetration = 0
+	penetration = -ARMOR_PENETRATION_TIER_1
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
-	effective_range_max = 3
 	shell_casing = /obj/effect/decal/ammo_casing
 
 /datum/ammo/bullet/pistol/tiny
@@ -35,22 +34,22 @@
 	name = "hollowpoint 9x19 bullet"
 
 	damage = 55 //hollowpoint is strong
-	penetration = -ARMOR_PENETRATION_TIER_2 //hollowpoint can't pierce armor!
+	penetration = -ARMOR_PENETRATION_TIER_3 //hollowpoint can't pierce armor!
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_5 //hollowpoint causes shrapnel
 
 // Used by M4A3 AP and mod88
 /datum/ammo/bullet/pistol/ap
 	name = "armor-piercing 9x19 bullet"
 
-	damage = 30
+	damage = 25
 	accuracy = HIT_ACCURACY_TIER_2
-	penetration= ARMOR_PENETRATION_TIER_4
+	penetration= ARMOR_PENETRATION_TIER_3
 
 /datum/ammo/bullet/pistol/ap/penetrating
 	name = "wall-penetrating 9x19 bullet"
 	shrapnel_chance = 0
 
-	damage = 35
+	damage = 30
 	penetration = ARMOR_PENETRATION_TIER_10
 
 /datum/ammo/bullet/pistol/ap/penetrating/set_bullet_traits()
@@ -110,7 +109,7 @@
 	accuracy = HIT_ACCURACY_TIER_3
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	damage = 55
-	penetration = -ARMOR_PENETRATION_TIER_1 //bigger but slower, armor works to counter more effectively
+	penetration = -ARMOR_PENETRATION_TIER_2 //bigger but slower, armor works to counter more effectively
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
 
 /datum/ammo/bullet/pistol/heavy/special //That's a spicy meataball. Hits harder, moves faster, can only be used in select guns
@@ -247,7 +246,7 @@
 	shrapnel_chance = 0
 	flags_ammo_behavior = AMMO_BALLISTIC
 	accuracy = HIT_ACCURACY_TIER_3
-	damage = 37
+	damage = 35
 
 /datum/ammo/bullet/pistol/squash/incendiary/set_bullet_traits()
 	..()
@@ -259,8 +258,8 @@
 	name = "high-explosive armor-piercing pistol bullet"
 
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
-	damage = 65
-	penetration = ARMOR_PENETRATION_TIER_5
+	damage = 60
+	penetration = ARMOR_PENETRATION_TIER_8
 
 /datum/ammo/bullet/pistol/squash/rubber
 	name = "rubber squash-head pistol bullet"
@@ -269,7 +268,6 @@
 	sound_override = 'sound/weapons/gun_c99.ogg'
 	damage = 2
 	stamina_damage = 40
-	effective_range_max = 3
 
 /datum/ammo/bullet/pistol/mankey
 	name = "live monkey"
@@ -299,7 +297,7 @@
 	flags_ammo_behavior = AMMO_BALLISTIC
 
 	accuracy = HIT_ACCURACY_TIER_8
-	damage = 40
+	damage = 30
 	penetration = 20
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
 

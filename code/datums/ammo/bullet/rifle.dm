@@ -6,7 +6,7 @@
 
 //====== 10X24 Pulse Rifle
 /datum/ammo/bullet/rifle
-	name = "10x24 bullet"
+	name = "light-explosive 10x24 bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	damage = 40
 	penetration = ARMOR_PENETRATION_TIER_1
@@ -63,7 +63,7 @@
 
 
 /datum/ammo/bullet/rifle/ap
-	name = "armor-piercing 10x24 bullet"
+	name = "light-explosive armor-piercing 10x24 bullet"
 
 	damage = 30
 	penetration = ARMOR_PENETRATION_TIER_8
@@ -240,7 +240,7 @@
 /datum/ammo/bullet/rifle/heavy/dirty
 	name = "irradiated 10x28 bullet"
 	debilitate = list(0,0,0,3,0,0,0,1)
-	damage = 55
+	damage = 60
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_7
 
 /datum/ammo/bullet/rifle/heavy/ap/dirty
@@ -290,7 +290,7 @@
 
 /datum/ammo/bullet/rifle/heavy/upp_smartgun
 	name = "12.7x40 bullet"
-	damage = 75 //giant fuck off bullet
+	damage = 90 //giant fuck off bullet
 	damage_falloff = 0
 
 /datum/ammo/bullet/rifle/heavy/upp_smartgun/on_hit_mob(mob/target, obj/projectile/fired_proj)
@@ -303,7 +303,7 @@
 
 /datum/ammo/bullet/rifle/heavy/upp_smartgun/flak
 	name = "12.7x40 flak bullet" //the gun makes the round detonate really early or something
-	damage = 35
+	damage = 20
 	penetration = -ARMOR_PENETRATION_TIER_2
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_3
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
@@ -317,7 +317,7 @@
 
 /datum/ammo/bullet/rifle/heavy/upp/flak_spread
 	name = "12.7x40 flak"
-	damage = 30
+	damage = 15
 	penetration = -ARMOR_PENETRATION_TIER_2
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
@@ -528,7 +528,7 @@
 
 /datum/ammo/bullet/rifle/upp/ap/penetrating
 	name = "wall-penerating 10x27 bullet"
-	damage = 45
+	damage = 40
 	penetration = ARMOR_PENETRATION_TIER_10
 
 /datum/ammo/bullet/rifle/upp/ap/penetrating/set_bullet_traits()
@@ -707,11 +707,11 @@
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/rifle/f90/ap
-	name = "armor-piercing 5.5x50mm bullet"
-	damage = 26
+	name = "armor-piercing 5.5x50 bullet"
+	damage = 30
 	penetration = ARMOR_PENETRATION_TIER_5
 
 /datum/ammo/bullet/rifle/f90/heap
-	name = "high-explosive armor-piercing 5.5x50mm bullet"
-	damage = 65
+	name = "high-explosive armor-piercing 5.5x50 bullet"
+	damage = 50
 	penetration = ARMOR_PENETRATION_TIER_6
