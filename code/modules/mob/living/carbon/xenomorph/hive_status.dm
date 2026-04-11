@@ -1172,7 +1172,7 @@
 
 	hive_stat_modifier_multiplier = list(
 		"damage" = XENO_HIVE_STATMOD_MULT_NONE,
-		"health" = XENO_HIVE_STATMOD_MULT_MED,
+		"health" = XENO_HIVE_STATMOD_MULT_NEGATIVE_MED,
 		"armor" = XENO_HIVE_STATMOD_MULT_NONE,
 		"explosivearmor" = XENO_HIVE_STATMOD_MULT_NONE,
 		"plasmapool" = XENO_HIVE_STATMOD_MULT_NONE,
@@ -1181,10 +1181,10 @@
 		"evasion" = XENO_HIVE_STATMOD_MULT_NONE,
 	)
 	hive_stat_modifier_flat = list(
-		"damage" = XENO_HIVE_STATMOD_FLAT_10,
+		"damage" = -XENO_HIVE_STATMOD_FLAT_10,
 		"health" = XENO_HIVE_STATMOD_FLAT_NONE,
-		"armor" = XENO_HIVE_STATMOD_MULT_MED,
-		"explosivearmor" = XENO_HIVE_STATMOD_FLAT_30,
+		"armor" = -XENO_HIVE_STATMOD_MULT_MED,
+		"explosivearmor" = -XENO_HIVE_STATMOD_FLAT_30,
 		"plasmapool" = XENO_HIVE_STATMOD_FLAT_NONE,
 		"plasmagain" = XENO_HIVE_STATMOD_FLAT_NONE,
 		"speed" = -XENO_HIVE_STATMOD_FLAT_LOWMED_SPEED,
