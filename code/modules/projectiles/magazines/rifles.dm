@@ -271,6 +271,11 @@
 	ammo_band_icon = "+m16_band"
 	ammo_band_icon_empty = "+m16_band_e"
 
+/obj/item/ammo_magazine/rifle/m16/extended/pve
+	name = "\improper M16 extended magazine"
+	desc = "An FMJ 5.56x45mm magazine for the M16 assault rifle and its clones. Holds 80 rounds."
+	max_rounds = 80
+
 /obj/item/ammo_magazine/rifle/m16/ap
 	name = "\improper M16 AP magazine"
 	desc = "An AP 5.56x45mm magazine for the M16 assault rifle and its clones. Holds 20 rounds."
