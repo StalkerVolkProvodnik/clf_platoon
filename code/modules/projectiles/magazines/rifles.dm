@@ -253,7 +253,7 @@
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "m16"
 	default_ammo = /datum/ammo/bullet/rifle/m16
-	max_rounds = 20
+	max_rounds = 40
 	gun_type = /obj/item/weapon/gun/rifle/m16
 	w_class = SIZE_MEDIUM
 	ammo_band_icon = "+m16_band"
@@ -265,7 +265,7 @@
 	caliber = "5.56x45mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "m16"
-	max_rounds = 30
+	max_rounds = 60
 	gun_type = /obj/item/weapon/gun/rifle/m16
 	w_class = SIZE_MEDIUM
 	ammo_band_icon = "+m16_band"
@@ -276,10 +276,40 @@
 	desc = "An AP 5.56x45mm magazine for the M16 assault rifle and its clones. Holds 20 rounds."
 	caliber = "5.56x45mm"
 	default_ammo = /datum/ammo/bullet/rifle/m16/ap
-	max_rounds = 20
+	max_rounds = 40
 	gun_type = /obj/item/weapon/gun/rifle/m16
 	w_class = SIZE_MEDIUM
 	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/rifle/m16/incendiary
+	name = "\improper M16 incendiary magazine"
+	desc = "An incendiary 5.56x45mm magazine for the M16 assault rifle and its clones. Holds 20 rounds."
+	caliber = "5.56x45mm"
+	default_ammo = /datum/ammo/bullet/rifle/m16/incendiary
+	max_rounds = 40
+	gun_type = /obj/item/weapon/gun/rifle/m16
+	w_class = SIZE_MEDIUM
+	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
+
+/obj/item/ammo_magazine/rifle/m16/toxin
+	name = "\improper M16 toxin magazine"
+	desc = "An toxin 5.56x45mm magazine for the M16 assault rifle and its clones. Holds 20 rounds."
+	caliber = "5.56x45mm"
+	default_ammo = /datum/ammo/bullet/rifle/m16/ap/toxin
+	max_rounds = 40
+	gun_type = /obj/item/weapon/gun/rifle/m16
+	w_class = SIZE_MEDIUM
+	ammo_band_color = AMMO_BAND_COLOR_TOXIN
+
+/obj/item/ammo_magazine/rifle/m16/heap
+	name = "\improper M16 HEAP magazine"
+	desc = "An HEAP 5.56x45mm magazine for the M16 assault rifle and its clones. Holds 20 rounds."
+	caliber = "5.56x45mm"
+	default_ammo = /datum/ammo/bullet/rifle/m16/heap
+	max_rounds = 40
+	gun_type = /obj/item/weapon/gun/rifle/m16
+	w_class = SIZE_MEDIUM
+	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
 //-------------------------------------------------------
 //AR10 RIFLE
