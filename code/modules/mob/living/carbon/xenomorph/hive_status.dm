@@ -1042,6 +1042,27 @@
 	ui_color = "#992626"
 	latejoin_burrowed = FALSE
 
+	hive_stat_modifier_multiplier = list(
+		"damage" = XENO_HIVE_STATMOD_MULT_NONE,
+		"health" = XENO_HIVE_STATMOD_MULT_MED,
+		"armor" = XENO_HIVE_STATMOD_MULT_NONE,
+		"explosivearmor" = XENO_HIVE_STATMOD_MULT_NONE,
+		"plasmapool" = XENO_HIVE_STATMOD_MULT_NONE,
+		"plasmagain" = XENO_HIVE_STATMOD_MULT_LOW,
+		"speed" = XENO_HIVE_STATMOD_MULT_NONE,
+		"evasion" = XENO_HIVE_STATMOD_MULT_NONE,
+	)
+	hive_stat_modifier_flat = list(
+		"damage" = XENO_HIVE_STATMOD_FLAT_10,
+		"health" = XENO_HIVE_STATMOD_FLAT_NONE,
+		"armor" = XENO_HIVE_STATMOD_FLAT_5,
+		"explosivearmor" = XENO_HIVE_STATMOD_FLAT_5,
+		"plasmapool" = XENO_HIVE_STATMOD_FLAT_NONE,
+		"plasmagain" = XENO_HIVE_STATMOD_FLAT_NONE,
+		"speed" = -XENO_HIVE_STATMOD_FLAT_LOW_SPEED,
+		"evasion" = XENO_HIVE_STATMOD_FLAT_NONE,
+	)
+
 	dynamic_evolution = FALSE
 
 /datum/hive_status/bravo
@@ -1088,6 +1109,35 @@
 
 	dynamic_evolution = FALSE
 
+/datum/hive_status/zeta
+	name = "Zeta Hive"
+	reporting_id = "zeta"
+	hivenumber = XENO_HIVE_ZETA
+	prefix = "Zeta "
+	color = "#828296"
+	ui_color = "#828296"
+
+	hive_stat_modifier_multiplier = list(
+		"damage" = XENO_HIVE_STATMOD_MULT_NONE,
+		"health" = XENO_HIVE_STATMOD_MULT_MEGAHIGH,
+		"armor" = XENO_HIVE_STATMOD_MULT_NONE,
+		"explosivearmor" = XENO_HIVE_STATMOD_MULT_NONE,
+		"plasmapool" = XENO_HIVE_STATMOD_MULT_NONE,
+		"plasmagain" = XENO_HIVE_STATMOD_MULT_LOW,
+		"speed" = XENO_HIVE_STATMOD_MULT_NONE,
+		"evasion" = XENO_HIVE_STATMOD_MULT_NONE,
+	)
+	hive_stat_modifier_flat = list(
+		"damage" = XENO_HIVE_STATMOD_MULT_MED,
+		"health" = XENO_HIVE_STATMOD_FLAT_NONE,
+		"armor" = XENO_HIVE_STATMOD_MULT_MED,
+		"explosivearmor" = XENO_HIVE_STATMOD_FLAT_30,
+		"plasmapool" = XENO_HIVE_STATMOD_FLAT_NONE,
+		"plasmagain" = XENO_HIVE_STATMOD_FLAT_NONE,
+		"speed" = -XENO_HIVE_STATMOD_FLAT_LOWMED_SPEED,
+		"evasion" = XENO_HIVE_STATMOD_FLAT_NONE,
+	)
+
 /datum/hive_status/feral
 	name = "Feral Hive"
 	reporting_id = "feral"
@@ -1133,7 +1183,7 @@
 	hive_stat_modifier_flat = list(
 		"damage" = XENO_HIVE_STATMOD_FLAT_10,
 		"health" = XENO_HIVE_STATMOD_FLAT_NONE,
-		"armor" = XENO_HIVE_STATMOD_FLAT_15,
+		"armor" = XENO_HIVE_STATMOD_MULT_MED,
 		"explosivearmor" = XENO_HIVE_STATMOD_FLAT_30,
 		"plasmapool" = XENO_HIVE_STATMOD_FLAT_NONE,
 		"plasmagain" = XENO_HIVE_STATMOD_FLAT_NONE,
@@ -1194,6 +1244,27 @@
 
 	hive_inherant_traits = list(TRAIT_XENONID, TRAIT_NO_COLOR)
 	latejoin_burrowed = FALSE
+
+	hive_stat_modifier_multiplier = list(
+		"damage" = XENO_HIVE_STATMOD_MULT_NONE,
+		"health" = XENO_HIVE_STATMOD_MULT_OHGOD,
+		"armor" = XENO_HIVE_STATMOD_MULT_NONE,
+		"explosivearmor" = XENO_HIVE_STATMOD_MULT_NONE,
+		"plasmapool" = XENO_HIVE_STATMOD_MULT_NONE,
+		"plasmagain" = XENO_HIVE_STATMOD_MULT_LOW,
+		"speed" = XENO_HIVE_STATMOD_MULT_NONE,
+		"evasion" = XENO_HIVE_STATMOD_MULT_NONE,
+	)
+	hive_stat_modifier_flat = list(
+		"damage" = XENO_HIVE_STATMOD_FLAT_30,
+		"health" = XENO_HIVE_STATMOD_FLAT_NONE,
+		"armor" = XENO_HIVE_STATMOD_FLAT_30,
+		"explosivearmor" = XENO_HIVE_STATMOD_FLAT_50,
+		"plasmapool" = XENO_HIVE_STATMOD_FLAT_NONE,
+		"plasmagain" = XENO_HIVE_STATMOD_FLAT_NONE,
+		"speed" = -XENO_HIVE_STATMOD_FLAT_HIGH_SPEED,
+		"evasion" = XENO_HIVE_STATMOD_FLAT_NONE,
+	)
 
 /datum/hive_status/corrupted/tamed
 	name = "Tamed Hive"
