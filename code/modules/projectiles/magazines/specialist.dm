@@ -17,7 +17,7 @@
 
 /obj/item/ammo_magazine/sniper/basic
 	name = "\improper M42A magazine (10x28mm)"
-	desc = "A magazine of M250 10x28mm ammunition. Not as effective as the match-grade kind, but still brings the hurt. An aimed shot with it will temporarily blind the targe and kindle the blaze further."
+	desc = "A magazine of M250 10x28mm ammunition. Not as effective as the match-grade kind, but still brings the hurt. An aimed shot with it will deal higher damage."
 	default_ammo = /datum/ammo/bullet/rifle/heavy
 	ammo_band_color = AMMO_BAND_COLOR_RUBBER
 
@@ -236,7 +236,7 @@
 
 /obj/item/ammo_magazine/smartgun/holo_targeting
 	name = "holotargeting smartgun drum"
-	desc = "Holotargeting rounds for use in the royal marines commando L58A3 smartgun. The drum itself is designed to only fit in L58A3 smartguns, and is marked with a blue X."
+	desc = "Gyrojet-assisted holotargeting rounds for use in the royal marines commando L58A3 smartgun. The drum itself is designed to only fit in L58A3 smartguns, and is marked with a blue X."
 	icon_state = "m56_drum_holo"
 	default_ammo = /datum/ammo/bullet/rifle/heavy/holo_target
 	gun_type = /obj/item/weapon/gun/smartgun/rmc
