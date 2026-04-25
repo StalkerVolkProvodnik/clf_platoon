@@ -3,8 +3,8 @@
 #define SGTMJR_VARIANT "Sergeant Major"
 #define SSGT_VARIANT "Staff Sergeant"
 #define SRSGT_VARIANT "Senior Sergeant"
+#define SECOND_LT_VARIANT "Second Lieutenant"
 #define CAPTAIN_VARIANT "Captain"
-#define MAJOR_VARIANT "Major"
 
 /datum/job/marine/leader
 	title = JOB_SQUAD_LEADER
@@ -76,11 +76,11 @@ OverrideTimelock(/datum/job/marine/leader, list(
 /datum/job/marine/leader/ai/forecon
 	title = JOB_SQUAD_LEADER_FORECON
 	gear_preset = /datum/equipment_preset/uscm/leader/forecon
-	gear_preset_secondary = /datum/equipment_preset/uscm/leader/forecon/major
-	job_options = list(CAPTAIN_VARIANT = "Captain", MAJOR_VARIANT = "Major")
+	gear_preset_secondary = /datum/equipment_preset/uscm/leader/forecon/lower
+	job_options = list(SECOND_LT_VARIANT = "2ndLt", SGTMJR_VARIANT = "SGTMJR")
 
 /datum/job/marine/leader/ai/forecon/handle_job_options(option)
-	if(option != MAJOR_VARIANT)
+	if(option != SGTMJR_VARIANT)
 		gear_preset = initial(gear_preset)
 	else
 		gear_preset = gear_preset_secondary
