@@ -123,6 +123,7 @@
 	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_UPP_GENERAL)
 	languages = list(LANGUAGE_RUSSIAN)
+	idtype = /obj/item/card/id/dogtag/upp
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 
@@ -160,6 +161,19 @@
 	name = parent_type::name + " (E4 Rank)"
 	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
 
+/datum/equipment_preset/uscm/pfc/upp/airborne
+	name = "UPP Paratrooper"
+	assignment = JOB_SQUAD_MARINE_UPP_AIRBORNE
+	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "Para"
+
+/datum/equipment_preset/uscm/pfc/upp/airborne/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "Airborne Telnyashka"
+
+/datum/equipment_preset/uscm/pfc/upp/airborne/private
+	name = parent_type::name + " (E1 Rank)"
+	paygrades = list(PAY_SHORT_UE1 = JOB_PLAYTIME_TIER_0)
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/sg
@@ -196,6 +210,7 @@
 	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "MG"
 	languages = list(LANGUAGE_RUSSIAN)
+	idtype = /obj/item/card/id/dogtag/upp
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 
@@ -249,6 +264,26 @@
 	name = parent_type::name + " (E2 Rank)"
 	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0)
 
+/datum/equipment_preset/uscm/sg/upp/airborne
+	name = "UPP Paratroop Machinegunner"
+	assignment = JOB_SQUAD_SMARTGUN_UPP_AIRBORNE
+	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/sg/upp/airborne/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "Airborne Telnyashka"
+
+/datum/equipment_preset/uscm/sg/upp/airborne/junior_sergeant
+	name = parent_type::name + " (E4 Rank)"
+	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/sg/upp/airborne/senior_private
+	name = parent_type::name + " (E2 Rank)"
+	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/sg/upp/airborne/private
+	name = parent_type::name + " (E1 Rank)"
+	paygrades = list(PAY_SHORT_UE1 = JOB_PLAYTIME_TIER_0)
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/rto
@@ -284,6 +319,7 @@
 	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_UPP_GENERAL)
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
+	idtype = /obj/item/card/id/dogtag/upp
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 	role_comm_title = "RTO"
@@ -348,6 +384,7 @@
 	assignment = JOB_SQUAD_MEDIC_UPP
 	role_comm_title = "PltStr"
 	languages = list(LANGUAGE_RUSSIAN)
+	idtype = /obj/item/card/id/dogtag/upp
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 
@@ -402,6 +439,26 @@
 	name = parent_type::name + " (E2 Rank)"
 	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
 
+/datum/equipment_preset/uscm/medic/upp/airborne
+	name = "UPP Paratroop Platoon Sanitar"
+	assignment = JOB_SQUAD_MEDIC_UPP_AIRBORNE
+	paygrades = list(PAY_SHORT_UE3)
+
+/datum/equipment_preset/uscm/medic/upp/airborne/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "Airborne Telnyashka"
+
+/datum/equipment_preset/uscm/medic/upp/airborne/junior_sergeant
+	name = parent_type::name + " (E4 Rank)"
+	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/medic/upp/airborne/senior_private
+	name = parent_type::name + " (E2 Rank)"
+	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/medic/upp/airborne/private
+	name = parent_type::name + " (E1 Rank)"
+	paygrades = list(PAY_SHORT_UE1 = JOB_PLAYTIME_TIER_0)
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/tl
@@ -427,6 +484,7 @@
 	paygrades = list(PAY_SHORT_UE5 = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_TLPREP)
 	languages = list(LANGUAGE_RUSSIAN)
+	idtype = /obj/item/card/id/dogtag/upp
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 
@@ -459,6 +517,17 @@
 	name = parent_type::name + " (E5 Rank)"
 	paygrades = list(PAY_SHORT_UE5 = JOB_PLAYTIME_TIER_0)
 
+/datum/equipment_preset/uscm/tl/upp/airborne
+	name = "UPP Paratroop Squad Sergeant"
+	assignment = JOB_SQUAD_TEAM_LEADER_UPP_AIRBORNE
+	paygrades = list(PAY_SHORT_UE5 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/tl/upp/airborne/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "Airborne Telnyashka"
+
+/datum/equipment_preset/uscm/tl/upp/airborne/junior_sergeant
+	name = parent_type::name + " (E4 Rank)"
+	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
 
 /*****************************************************************************************************/
 
@@ -514,6 +583,7 @@
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_LEADERSHIP, ACCESS_UPP_FLIGHT)
 	paygrades = list(PAY_SHORT_UE7 = JOB_PLAYTIME_TIER_0)
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
+	idtype = /obj/item/card/id/dogtag/upp
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 
@@ -539,6 +609,18 @@
 	assignment = JOB_SQUAD_LEADER_FORECON_UPP
 	paygrades = list(PAY_SHORT_UE7 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RSS"
+
+/datum/equipment_preset/uscm/leader/upp/airborne
+	name = "UPP Paratroop Platoon Sergeant"
+	assignment = JOB_SQUAD_LEADER_UPP_AIRBORNE
+	paygrades = list(PAY_SHORT_UE6 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/leader/upp/airborne/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "Airborne Telnyashka"
+
+/datum/equipment_preset/uscm/leader/upp/airborne/sergeant_major
+	name = parent_type::name + " (E7 Rank)"
+	paygrades = list(PAY_SHORT_UE7 = JOB_PLAYTIME_TIER_0)
 
 //*****************************************************************************************************/
 // ERT members that spawn with full gear from DEFCON
