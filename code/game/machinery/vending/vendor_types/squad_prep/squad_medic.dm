@@ -426,3 +426,5 @@ GLOBAL_LIST_INIT(cm_vending_chemical_medic, list(
 	req_access = list(ACCESS_TWE_MEDPREP)
 	vendor_theme = VENDOR_THEME_COMPANY
 	vendor_role = list(JOB_TWE_RMC_MEDIC)
+
+//abra huyabra
