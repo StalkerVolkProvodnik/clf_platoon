@@ -49,6 +49,10 @@ GLOBAL_LIST_EMPTY(cached_maps)
 		var/icon/image = icon('icons/UI_icons/map_blips.dmi', icon_state = iconstate)
 		icons[iconstate] += image
 
+	for(var/iconstate in icon_states('icons/mob/pathogen/neo_blips.dmi'))
+		var/icon/image = icon('icons/mob/pathogen/neo_blips.dmi', icon_state = iconstate)
+		icons[iconstate] += image
+
 	var/list/base64_icons = list()
 	for(var/iconstate in icons)
 		base64_icons[iconstate] = icon2base64(icons[iconstate])
@@ -109,7 +113,22 @@ GLOBAL_LIST_INIT(resin_build_order_ovipositor, list(
 ))
 
 GLOBAL_LIST_INIT(resin_build_order_pathogen_overmind, list(
+	/datum/resin_construction/resin_turf/wall/pathogen/overmind,
+	/datum/resin_construction/resin_turf/membrane/pathogen/overmind,
+	/datum/resin_construction/resin_obj/door/pathogen/overmind,
 	/datum/resin_construction/resin_obj/popper_cocoon
+))
+
+GLOBAL_LIST_INIT(resin_build_order_pathogen_base, list(
+	/datum/resin_construction/resin_turf/wall/pathogen,
+	/datum/resin_construction/resin_turf/membrane/pathogen,
+	/datum/resin_construction/resin_obj/door/pathogen
+))
+
+GLOBAL_LIST_INIT(resin_build_order_pathogen_better, list(
+	/datum/resin_construction/resin_turf/wall/pathogen/thick,
+	/datum/resin_construction/resin_turf/membrane/pathogen/thick,
+	/datum/resin_construction/resin_obj/door/pathogen/thick
 ))
 
 //Xeno Leader Mark Meanings
@@ -209,6 +228,13 @@ GLOBAL_LIST_INIT(language_keys, setup_language_keys()) //table of say codes for 
 // Origins
 GLOBAL_REFERENCE_LIST_INDEXED(origins, /datum/origin, name)
 GLOBAL_LIST_INIT(player_origins, FACTION_ORIGINS)
+// RU PVE ADDITION - GLYPHS
+GLOBAL_LIST_INIT(accent_glyphs, list(
+	"!", "#", "$", "%", "&", "+", "=", "?", "@", "~", "^",
+	"/", "\\", "(", ")", "{", "}", "\[", "]", "<", ">", "|",
+	"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
+	"N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
+))
 
 //Xeno hives
 GLOBAL_LIST_INIT_TYPED(hive_datum, /datum/hive_status, list(
