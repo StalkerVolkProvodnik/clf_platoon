@@ -492,6 +492,26 @@
 	var/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/webbing = new()
 	src.attach_accessory(null, webbing, TRUE)
 
+/obj/item/clothing/suit/marine/faction/upp/canc/old
+	name = "\improper Type 3 armored cuirass"
+	desc = "Extremely cheap and easy to produce CANC designed armored vest made of two layers of steel and ceramics, encased in a rad-absorbent venlar carrier. It's bad, heavy, but it's certainly better than nothing. Used by CANC army reservists"
+	icon_state = "canc_old"
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
+	slowdown = SLOWDOWN_ARMOR_MEDIUM
+	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_LOW
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+	armor_rad = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_LOW
+	time_to_unequip = 10
+	time_to_equip = 10
+	flags_inventory = null
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
+	specialty = "\improper Type 3"
+	has_light = FALSE
+
 /obj/item/clothing/suit/marine/smartgunner/upp/canc
 	name = "\improper Type 12 CANC harness"
 	desc = "Vintage CANC armor system. Provides basic ballistic/shrapnel protection."

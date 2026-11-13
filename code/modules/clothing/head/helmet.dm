@@ -1067,9 +1067,19 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 /obj/item/clothing/head/helmet/marine/veteran/canc
 	name = "\improper Type 93 helmet"
-	desc = "Outdated CANC-style helmet."
+	desc = "CANC-style helmet."
 	icon_state = "canc"
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
+
+/obj/item/clothing/head/helmet/marine/veteran/canc/old
+	name = "\improper Type 60 helmet"
+	desc = "Outdated CANC kettle helmet. At least it's not as heavy. Used by CANC army reservists."
+	icon_state = "canc_old"
+	flags_inv_hide = HIDEEARS|HIDETOPHAIR
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
 
 /obj/item/clothing/head/helmet/marine/veteran/canc/blackops
 	name = "\improper Type 107-C helmet"
